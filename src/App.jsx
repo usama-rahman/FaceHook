@@ -1,19 +1,19 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./page/Home";
-import Login from "./page/Login";
-import Register from "./page/Register";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './page/Home';
+import Login from './page/Login';
+import Register from './page/Register';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/login",
+    path: '/login',
     element: <Login />,
   },
   {
-    path: "/register",
+    path: '/register',
     element: <Register />,
   },
 ]);
