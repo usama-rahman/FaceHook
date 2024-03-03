@@ -30,6 +30,27 @@ function LoginForm() {
           } `}
         />
       </Field>
+
+      <Field label="Password">
+        <input
+          {...register('password', { required: 'Eamil ID is Required' })}
+          name="password"
+          type="password"
+          id="password"
+          className={` auth-input ${
+            errors.email ? 'border-red-500' : 'boreder-gray-200'
+          } `}
+        />
+      </Field>
+
+      <Field>
+        <button
+          className="auth-input bg-lwsGreen font-bold text-deepDark transition-all hover:opacity-90"
+          type="submit"
+        >
+          Login
+        </button>
+      </Field>
     </form>
   );
 }

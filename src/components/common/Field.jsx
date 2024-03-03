@@ -1,10 +1,19 @@
 /* eslint-disable no-unsafe-optional-chaining */
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 
-const Field = ({ label, childern, htmlFor, error }) => {
-  const id = htmlFor || getChilId(childern);
+import React from 'react';
+
+const Field = ({ label, children, htmlFor, error }) => {
+  const getChildId = (children) => {
+    const child = React.Children.only(children);
+
+    if ('id' in child?.props) {
+      return child.props.id;
+    }
+  };
+
+  const id = htmlFor || getChildId(children);
 
   return (
     <div className="form-control">
@@ -13,7 +22,7 @@ const Field = ({ label, childern, htmlFor, error }) => {
           {label}
         </label>
       )}
-      {childern}
+      {children}
 
       {error && (
         <div className="text-red-600" role="alert">
@@ -22,14 +31,6 @@ const Field = ({ label, childern, htmlFor, error }) => {
       )}
     </div>
   );
-};
-
-const getChilId = () => {
-  const child = React.Children.only(childern);
-
-  if ('id' in child?.props) {
-    return child.props.id;
-  }
 };
 
 export default Field;
