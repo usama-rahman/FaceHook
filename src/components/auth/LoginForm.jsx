@@ -1,12 +1,12 @@
 /* eslint-disable no-extra-boolean-cast */
-/* eslint-disable no-unused-vars */
-import { useForm } from 'react-hook-form';
-
 import Field from '../common/Field';
+import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuh';
 
-function LoginForm() {
+const LoginForm = () => {
   const navigate = useNavigate();
+  const { setAuth } = useAuth();
 
   const {
     register,
@@ -16,6 +16,11 @@ function LoginForm() {
 
   const submitForm = (formData) => {
     console.log(formData);
+    // Make an API Call
+    // Will Return Tokens and Logged in user information
+
+    const user = { ...formData };
+    setAuth({ user });
     navigate('/');
   };
 
@@ -61,40 +66,6 @@ function LoginForm() {
       </Field>
     </form>
   );
-}
-export default LoginForm;
-
-const demo = () => {
-  {
-    /* <!-- email --> */
-  }
-  <div className="form-control">
-    <label className="auth-label" htmlFor="email">
-      Email
-    </label>
-    <input className="auth-input" name="email" type="email" id="email" />
-  </div>;
-  {
-    /* <!-- password --> */
-  }
-  <div className="form-control">
-    <label className="auth-label" htmlFor="email">
-      Password
-    </label>
-    <input
-      className="auth-input"
-      name="password"
-      type="password"
-      id="password"
-    />
-  </div>;
-  {
-    /* <!-- Submit --> */
-  }
-  <button
-    className="auth-input bg-lwsGreen font-bold text-deepDark transition-all hover:opacity-90"
-    type="submit"
-  >
-    Login
-  </button>;
 };
+
+export default LoginForm;

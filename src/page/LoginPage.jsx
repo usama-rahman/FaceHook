@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import AuthIllustration from '../../assets/images/auth_illustration.png';
-import LoginForm from '../../components/auth/LoginForm';
 
-const Login = () => {
+import AuthIllustration from '../assets/images/auth_illustration.png';
+import LoginForm from '../components/auth/LoginForm';
+
+const LoginPage = () => {
   return (
     <main className="  flex min-h-screen items-center justify-center bg-deepDark py-8">
       <div className="max-w-[1368px] flex-1">
@@ -52,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
