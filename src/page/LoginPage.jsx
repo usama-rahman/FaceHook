@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import React from 'react';
 import AuthIllustration from '../assets/images/auth_illustration.png';
 import LoginForm from '../components/auth/LoginForm';
 

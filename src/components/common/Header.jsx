@@ -3,7 +3,7 @@ import HomeIcon from '../../assets/icons/home.svg';
 import Notification from '../../assets/icons/notification.svg';
 import Avatar from '../../assets/images/avatars/avatar_1.png';
 import Logout from '../auth/Logout';
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {

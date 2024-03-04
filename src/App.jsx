@@ -1,8 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-
+import React from 'react';
 import PrivateRoutes from './routes/PrivateRoutes';
-
-
 
 import ProfilePage from './page/ProfilePage';
 import NotFoundPage from './page/NotFoundPage';
