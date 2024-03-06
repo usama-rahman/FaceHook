@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 import { api } from "../api";
 import { useAuth } from "./useAuth";
 
@@ -39,13 +39,13 @@ const useAxios = () => {
             const { token } = response.data;
 
             console.log(`New Token: ${token}`);
-            setAuth({...auth, authToken: token})
+            setAuth({ ...auth, authToken: token });
 
             // Retry the original request with the new token
             originalRequest.headers.Authorization = `Bearer ${token}`;
             return axios(originalRequest);
           } catch (error) {
-            throw error;
+            throw new error();
           }
         }
 
@@ -55,10 +55,10 @@ const useAxios = () => {
     return () => {
       api.interceptors.request.eject(requestIntercept);
       api.interceptors.response.eject(responseIntercept);
-    }
+    };
   }, [auth.authToken]);
 
-  return {api};
+  return { api };
 };
 
 export default useAxios;
