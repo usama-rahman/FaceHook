@@ -1,14 +1,14 @@
-import { Route, Routes } from 'react-router-dom';
-import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import NotFoundPage from './pages/NotFoundPage';
+import ProfilePage from './pages/ProfilePage';
+import RegistrationPage from './pages/RegistrationPage';
+
 import PrivateRoutes from './routes/PrivateRoutes';
 
-import ProfilePage from './page/ProfilePage';
-import NotFoundPage from './page/NotFoundPage';
-import LoginPage from './page/LoginPage';
-import RegistrationPage from './page/RegistrationPage';
-import HomePage from './page/HomePage';
-
 function App() {
+
   return (
     <>
       <Routes>
@@ -21,7 +21,7 @@ function App() {
         <Route element={<NotFoundPage />} path="*" />
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
