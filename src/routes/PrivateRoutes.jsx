@@ -4,26 +4,26 @@ import { useAuth } from "../hooks/useAuth";
 import ProfileProvider from "../providers/ProfileProvider";
 
 const PrivateRoutes = () => {
-  const { auth } = useAuth();
+    const { auth } = useAuth();
 
-  return (
-    <>
-      {auth.authToken ? (
+    return (
         <>
-          <ProfileProvider>
-            <Header />
-            <main className="mx-auto max-w-[1020px] py-8">
-              <div className="container">
-                <Outlet />
-              </div>
-            </main>
-          </ProfileProvider>
+            {auth.authToken ? (
+                <>
+                    <ProfileProvider>
+                        <Header />
+                        <main className="mx-auto max-w-[1020px] py-8">
+                            <div className="container">
+                                <Outlet />
+                            </div>
+                        </main>
+                    </ProfileProvider>
+                </>
+            ) : (
+                <Navigate to="/login" />
+            )}
         </>
-      ) : (
-        <Navigate to="/login" />
-      )}
-    </>
-  );
+    );
 };
 
 export default PrivateRoutes;
