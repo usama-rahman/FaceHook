@@ -27,7 +27,6 @@ const Bio = () => {
           data: response.data,
         });
       }
-
       setEditMode(false);
     } catch (err) {
       dispatch({

@@ -1,4 +1,4 @@
-# FaceHook Project
+# FaceHook Project (beta - 0.2v)
 
 ### Run the server
 

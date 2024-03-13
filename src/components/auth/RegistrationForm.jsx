@@ -1,4 +1,3 @@
-/* eslint-disable no-extra-boolean-cast */
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Field from "../common/Field";
@@ -45,7 +44,7 @@ const RegistrationForm = () => {
             required: "First Name is Required",
           })}
           className={`auth-input ${
-            !!errors.firstName ? "border-red-500" : "border-gray-200"
+            errors.firstName ? "border-red-500" : "border-gray-200"
           }`}
           type="firstName"
           name="firstName"
@@ -56,7 +55,7 @@ const RegistrationForm = () => {
         <input
           {...register("lastName")}
           className={`auth-input ${
-            !!errors.lastName ? "border-red-500" : "border-gray-200"
+            errors.lastName ? "border-red-500" : "border-gray-200"
           }`}
           type="lastName"
           name="lastName"
@@ -67,7 +66,7 @@ const RegistrationForm = () => {
         <input
           {...register("email", { required: "Email ID is Required" })}
           className={`auth-input ${
-            !!errors.email ? "border-red-500" : "border-gray-200"
+            errors.email ? "border-red-500" : "border-gray-200"
           }`}
           type="email"
           name="email"
@@ -85,7 +84,7 @@ const RegistrationForm = () => {
             },
           })}
           className={`auth-input ${
-            !!errors.password ? "border-red-500" : "border-gray-200"
+            errors.password ? "border-red-500" : "border-gray-200"
           }`}
           type="password"
           name="password"
