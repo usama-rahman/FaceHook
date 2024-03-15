@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { actions } from "../../actions";
+
 import CheckIcon from "../../assets/icons/check.svg";
 import EditIcon from "../../assets/icons/edit.svg";
+
+import { actions } from "../../actions";
 import useAxios from "../../hooks/useAxios";
 import { useProfile } from "../../hooks/useProfile";
 

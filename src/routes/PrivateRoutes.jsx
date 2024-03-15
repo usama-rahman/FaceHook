@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from "react-router-dom";
+
 import Header from "../components/common/Header";
 import { useAuth } from "../hooks/useAuth";
-
 import PostProvider from "../providers/PostProvider";
 import ProfileProvider from "../providers/ProfileProvider";
 

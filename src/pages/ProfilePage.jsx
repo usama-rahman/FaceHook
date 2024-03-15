@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import { actions } from "../actions";
 import { useAuth } from "../hooks/useAuth";
 import useAxios from "../hooks/useAxios";
@@ -9,6 +10,7 @@ import ProfileInfo from "../components/profile/ProfileInfo";
 
 const ProfilePage = () => {
   const { state, dispatch } = useProfile();
+
   const { api } = useAxios();
   const { auth } = useAuth();
 

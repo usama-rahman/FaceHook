@@ -1,12 +1,19 @@
 /* eslint-disable react/prop-types */
 
 import { useState } from "react";
+
+// icon
+
 import CommentIcon from "../../assets/icons/comment.svg";
 import LikeFilledIcon from "../../assets/icons/like-filled.svg";
 import LikeIcon from "../../assets/icons/like.svg";
 import ShareIcon from "../../assets/icons/share.svg";
+
+// hooks
+
 import { useAuth } from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
+
 const PostAction = ({ post, commentCount }) => {
   const { auth } = useAuth();
   const [liked, setLiked] = useState(post?.likes?.includes(auth?.user?.id));

@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import Field from "../common/Field";
-
 import { useNavigate } from "react-router-dom";
+
+import Field from "../common/Field";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,

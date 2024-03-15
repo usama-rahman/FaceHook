@@ -16,11 +16,13 @@ import { actions } from "../../actions";
 
 const PostHeader = ({ post }) => {
   const [showAction, setShowAction] = useState(false);
+
   const { avatarURL } = useAvatar(post);
   const { auth } = useAuth();
-  const isMe = post?.author?.id == auth?.user?.id;
   const { dispatch } = usePost();
   const { api } = useAxios();
+
+  const isMe = post?.author?.id == auth?.user?.id;
 
   function toggleAction() {
     setShowAction(!showAction);

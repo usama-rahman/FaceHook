@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 import RegistrationLogo from "../assets/icons/registration.svg";
+
 import RegistrationForm from "../components/auth/RegistrationForm";
 
 const RegistrationPage = () => {

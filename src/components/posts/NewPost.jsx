@@ -1,6 +1,8 @@
 import { useState } from "react";
+
 import { useAuth } from "../../hooks/useAuth";
 import PostEntry from "./PostEntry";
+
 const NewPost = () => {
   const [showPostEntry, setShowPostEntry] = useState(false);
   const { auth } = useAuth();

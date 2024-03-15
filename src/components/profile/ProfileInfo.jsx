@@ -4,6 +4,7 @@ import ProfileImage from "./ProfileImage";
 
 const ProfileInfo = () => {
   const { state } = useProfile();
+
   return (
     <div className="flex flex-col items-center py-8 text-center">
       <ProfileImage />

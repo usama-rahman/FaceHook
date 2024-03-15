@@ -1,13 +1,12 @@
+import { Link } from "react-router-dom";
+
 import HomeIcon from "../../assets/icons/home.svg";
 import Notification from "../../assets/icons/notification.svg";
 import Logo from "../../assets/images/logo.svg";
+
 import Logout from "../auth/Logout";
-
 import { useAuth } from "../../hooks/useAuth";
-
 import { useProfile } from "../../hooks/useProfile";
-
-import { Link } from "react-router-dom";
 
 const Header = () => {
   const { auth } = useAuth();

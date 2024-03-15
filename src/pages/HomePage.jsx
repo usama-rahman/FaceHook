@@ -1,9 +1,8 @@
 import { useEffect } from "react";
+
 import { actions } from "../actions";
 import PostList from "../components/posts/PostList";
-
 import useAxios from "../hooks/useAxios";
-
 import NewPost from "../components/posts/NewPost";
 import { usePost } from "../hooks/usePost";
 

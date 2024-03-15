@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
 import { useForm } from "react-hook-form";
-import { actions } from "../../actions";
+
 import AddPhoto from "../../assets/icons/addPhoto.svg";
+
+import { actions } from "../../actions";
 import { useAuth } from "../../hooks/useAuth";
 import useAxios from "../../hooks/useAxios";
 import { usePost } from "../../hooks/usePost";
@@ -24,7 +26,6 @@ const PostEntry = ({ onCreate }) => {
   } = useForm();
 
   const handlePostSubmit = async (formData) => {
-    console.log(formData);
     dispatch({ type: actions.post.DATA_FETCHING });
 
     try {
